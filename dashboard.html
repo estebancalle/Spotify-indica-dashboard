@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -74,6 +108,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<script type="ojs-define">
+{"contents":[{"name":"mergedDf_ojs","value":{"Tema_id":["6guqUzKptgMnQ8hpwhiw2v","608gPPH4uiMuT8e2xckUWy","4NITGUFP5BdQJ1SIo4d2p6","1ZGGcJ6khQC9cCbBysTrLx","4et92ubrp8hDFVX0pAZVo4","65nmEiiTvOqgMgvhmCj34i","2uVgvXDeBTjKhebj6KaMa6","1M9uwT9sxRGtlfdMkB7arl","7DvzJKotgl30mjOelPHZJ3","7lpR1pDE2jfrzVu4Qy7hZi","2xK6zF7jloHYnY3hrsmBG2","1IqrE6ixtX0OE7YVdgeYwr","2hAZyNG7kNBrDjJRktcDb2","0DngPzimnynQRedhjd540n","7HXtna9OxGanfaJQz7iHod","2g7MeGvYrM9nN5d7cBOgBP","0pEJny202NK5HL4fwYYJ5d","1SOTBW3630lB9acIFAHy9O","2HyoIOXwTnMcgLpJOmCuoO","6emJXoEmWfAOUpj0qPOIZD","5G3MkXyqyfoE1x2CsuT9xl","2PXXKnAej3WMqqeobEaSjH","5HiD2QxFmFSNRAI9QADVJ2","1KX0hdxvnliVvSM7n1MVSm","5d1UC3LBiJV5N1aTrABgEQ","0ZxHrvkHgth2T7JirK4ZvE","6rU7rsBeyj5II0KWjHyudJ","0INduKtC7ySJVrqS8orTrX","1Y22booe6fvez4XmRB6JZI","7CLMwq5ZsYyqAKrqPEZAuv","0Qbic8yCCZIaiMjEz2PRm8","29Js1ocvFyVzRzuJbCDA46","4xFVkntBgSAB4oriiNgngH","45GzdI8EY7QiUKC7pcxut9","2mR43iR3NpdDiAcCqNyMjg","5uvcQJfmIBSxs15bkilRlP","2lwSB714y01agBFqcMpNC9","1A0DIALa8CfNCGy61G6sM0","1eg5Dp8bvhvjk4WaJbczBB","3I6avugOA30b3ODsler2PX","4ezu1njO7VtPQuxNC9vlb9","3tpinWQRwHp4UsBA7A1GHp","29ZdWNhXiVOI3e43Q3qDkZ","541F4KIjF2k0scTmRra01X","7DjhNxx4ukj6vQQIeoH2HN","0XH0NK8uWExA3WPUia31Mm","4v5nXnbgPhq275xK4nkiEH","3ZTnVfiPIEppWkBh9kaTkb","7crUUPTzoplwgBXzj7jnPa","5VOfHVvWXABIhdnTZ8YjW0","3ztVx58o4wNtNCNeDg1t0Z","5Cib7barvlvnJwtmzgFEgD","00FQFFy9u1ldgBz3aHnfKI","2Z7eENXSEziekJ5FsZAEcX","508zSS1zDAAtCeijvhQZ4o","5bT4dG3LR13mxeie4dsBXZ","2Xz6vUFTJ9cICIMWaUvuGs","7twrzXBceJL2yyhDeaHfEF","5H3UP7NCvLShHcyGXHPlLa","0KgASwQXz7FRsXDcjlI7lC","12LIpspvXlHC5GX4A21vUZ","4GIEo8RYCUEcwqJetl3MFS","5LC493hfQ403tO4uetfIMb","1ddav3coBB6GDpHC1PIj9Y","1vOM9q9FZcuw7sAsXeYgoD","1ug7yXk31XK1rPcGw63tnQ","5QGLnBLNlDgwGqLUz7TSrm","3i9aSXn8VvW1YkQNCYGyIq","6o2pZns0ZrkPxHf14mToQF","0YMPiNMamrOIlR9wLxV2zI","2CAWEYKWO6lwbrBoAmU4NY","3g0TwHk8u9agtWxeTc9pzj","6arzH6lzxk92L1Zb5PbmGB","2j56kbwqGyrRY8XHTIcqD9","6c4RhtbKBWmgGQvmEBUFPt","2dBeFdotjzBL8ontruU01c","2EfvqMAwtgXvifhbk2VkdI","0hnqLh1CVAUQys0FB9VLMY","0aWoQx4WIaOYNIyF6kQUMy","7e82zE1XqMathfOlZUFqvF","0J8HSATlJjR5cru9CZnoYG","76gOmVti56OkMPgZW6F8eo","5d8LhSUADffmxzcXYser7n","1viGr0LJrSaNbD8XrESeyT","1E5Ln61GCnfI9Z5NVB3683","0U3cpzgK2WH92Da0ORWzK8","6GE6AFaHkPdhhsoiFLIwBM","0EZA54JE5rY7GxQYxNfLuo","4zDd8eCzXkllElPwfyYOw9","5XSpOX1TXHM6rfkUvxqClM","5n8ZvLloAsvmt8JiLi633g","2kZSjko5WIDZipfcsZamzF","48hS9nOmQZsyJvYh5OjRed","4Z3MT7QQI5fcsDpW0rqsjR","72b85ZypnjQzqaUUYtU6v5","0diYAExxV89ntgGTOfxbGm","7uaSjCUV8jsgQ6kjyAZDT0","0ovxOwj8krLK4UenPW6syP","4M7a04gx7jmiZVpptlDRoJ","5iummfykoprKpPOXTouWCY"],"Portada":["https://i.scdn.co/image/ab67616d0000b2735e0eabbe17d4c06a78524dce","https://i.scdn.co/image/ab67616d0000b273e57eb3e81584c78ff7049338","https://i.scdn.co/image/ab67616d0000b2732aa4f3ee8faa2799926e4f74","https://i.scdn.co/image/ab67616d0000b2738099fe77267b8d9566fbfc5c","https://i.scdn.co/image/ab67616d0000b273ce04b5e61679d309dc5dbc09","https://i.scdn.co/image/ab67616d0000b273f912731a2a17fcb9bdbc2508","https://i.scdn.co/image/ab67616d0000b273d7161be1414c76751856ef0c","https://i.scdn.co/image/ab67616d0000b27372e32d8d9f11fd3cb6b2dcea","https://i.scdn.co/image/ab67616d0000b2735bd5fe3b47f751e54f917d8d","https://i.scdn.co/image/ab67616d0000b273a546ce47a1536635e98fbbbc","https://i.scdn.co/image/ab67616d0000b273a546ce47a1536635e98fbbbc","https://i.scdn.co/image/ab67616d0000b273a546ce47a1536635e98fbbbc","https://i.scdn.co/image/ab67616d0000b273a546ce47a1536635e98fbbbc","https://i.scdn.co/image/ab67616d0000b273a546ce47a1536635e98fbbbc","https://i.scdn.co/image/ab67616d0000b273a546ce47a1536635e98fbbbc","https://i.scdn.co/image/ab67616d0000b273a546ce47a1536635e98fbbbc","https://i.scdn.co/image/ab67616d0000b273a546ce47a1536635e98fbbbc","https://i.scdn.co/image/ab67616d0000b273a546ce47a1536635e98fbbbc","https://i.scdn.co/image/ab67616d0000b2733900ce65814c43646fa826e0","https://i.scdn.co/image/ab67616d0000b273d8a75f13d6f8f89e3a48d551","https://i.scdn.co/image/ab67616d0000b273536f5048efe05209c55d8b3f","https://i.scdn.co/image/ab67616d0000b273e25a70e421603dbfc8fbeb08","https://i.scdn.co/image/ab67616d0000b273e995ddeb6e518344cecf66db","https://i.scdn.co/image/ab67616d0000b2732bd2a76566caebd9cb22141f","https://i.scdn.co/image/ab67616d0000b273e25a70e421603dbfc8fbeb08","https://i.scdn.co/image/ab67616d0000b2736c5df604ff07ebb8203abd93","https://i.scdn.co/image/ab67616d0000b2735a43b427c336b1f0c8312b39","https://i.scdn.co/image/ab67616d0000b273f2ed6fc4d536c141f10ca875","https://i.scdn.co/image/ab67616d0000b273074a9e9bf2afdc6ee81d7977","https://i.scdn.co/image/ab67616d0000b2731ad8ed279ab28e96f6a05618","https://i.scdn.co/image/ab67616d0000b27381892b47b8d7a6bf854e5c25","https://i.scdn.co/image/ab67616d0000b273bd27877dd52bef79bba3ed9d","https://i.scdn.co/image/ab67616d0000b273bd27877dd52bef79bba3ed9d","https://i.scdn.co/image/ab67616d0000b273bd27877dd52bef79bba3ed9d","https://i.scdn.co/image/ab67616d0000b273bd27877dd52bef79bba3ed9d","https://i.scdn.co/image/ab67616d0000b273bd27877dd52bef79bba3ed9d","https://i.scdn.co/image/ab67616d0000b273bd27877dd52bef79bba3ed9d","https://i.scdn.co/image/ab67616d0000b273bd27877dd52bef79bba3ed9d","https://i.scdn.co/image/ab67616d0000b273bd27877dd52bef79bba3ed9d","https://i.scdn.co/image/ab67616d0000b273bd27877dd52bef79bba3ed9d","https://i.scdn.co/image/ab67616d0000b2737e90b4c5da0545ff29ed04ba","https://i.scdn.co/image/ab67616d0000b27359b97e146474ddcd03e5e78f","https://i.scdn.co/image/ab67616d0000b27359b97e146474ddcd03e5e78f","https://i.scdn.co/image/ab67616d0000b27359b97e146474ddcd03e5e78f","https://i.scdn.co/image/ab67616d0000b27359b97e146474ddcd03e5e78f","https://i.scdn.co/image/ab67616d0000b27359b97e146474ddcd03e5e78f","https://i.scdn.co/image/ab67616d0000b27359b97e146474ddcd03e5e78f","https://i.scdn.co/image/ab67616d0000b27359b97e146474ddcd03e5e78f","https://i.scdn.co/image/ab67616d0000b27359b97e146474ddcd03e5e78f","https://i.scdn.co/image/ab67616d0000b27359b97e146474ddcd03e5e78f","https://i.scdn.co/image/ab67616d0000b27359b97e146474ddcd03e5e78f","https://i.scdn.co/image/ab67616d0000b27318ca135dd520be850d51318b","https://i.scdn.co/image/ab67616d0000b273ed36d98f0cb3b4e31ad17ba6","https://i.scdn.co/image/ab67616d0000b273b901108f1b0b31d0d48ce506","https://i.scdn.co/image/ab67616d0000b2735de8058d44df1198a2e7e22e","https://i.scdn.co/image/ab67616d0000b273bbd7e15d780b0a57c99ad365","https://i.scdn.co/image/ab67616d0000b273be1f96e31c5d6364e19eaf8f","https://i.scdn.co/image/ab67616d0000b2734cd13b4908a26a7390bbd399","https://i.scdn.co/image/ab67616d0000b2737dd0d6782679db6c624d5fe7","https://i.scdn.co/image/ab67616d0000b2738ae2a988ee5c8eb25d53f1ae","https://i.scdn.co/image/ab67616d0000b2738ae2a988ee5c8eb25d53f1ae","https://i.scdn.co/image/ab67616d0000b2739f9ae9cca7061f14b69fb13d","https://i.scdn.co/image/ab67616d0000b273300ff07778e64fe8c71e71c6","https://i.scdn.co/image/ab67616d0000b273f428f15709c2bea41f5e8aeb","https://i.scdn.co/image/ab67616d0000b2732e9aca0ef682e577d296607e","https://i.scdn.co/image/ab67616d0000b273c6c9053cf40f78c88e3d6618","https://i.scdn.co/image/ab67616d0000b2737e4f73a02b46c0e71a50a47f","https://i.scdn.co/image/ab67616d0000b273246524818e9e82392d56301d","https://i.scdn.co/image/ab67616d0000b273fd5225e12e789083586de204","https://i.scdn.co/image/ab67616d0000b27394814955bab712353e090134","https://i.scdn.co/image/ab67616d0000b2735da5cc2e1f521a6628472a08","https://i.scdn.co/image/ab67616d0000b273f5328ef95350661650762695","https://i.scdn.co/image/ab67616d0000b2730d8fceb9f93e3f0a9efc651f","https://i.scdn.co/image/ab67616d0000b2738d222e690acb88c1cdebaa60","https://i.scdn.co/image/ab67616d0000b27348163a380127a8e9d4992dfe","https://i.scdn.co/image/ab67616d0000b27315bb125290f06007f5fdde84","https://i.scdn.co/image/ab67616d0000b27315bb125290f06007f5fdde84","https://i.scdn.co/image/ab67616d0000b27315bb125290f06007f5fdde84","https://i.scdn.co/image/ab67616d0000b27315bb125290f06007f5fdde84","https://i.scdn.co/image/ab67616d0000b27315bb125290f06007f5fdde84","https://i.scdn.co/image/ab67616d0000b27315bb125290f06007f5fdde84","https://i.scdn.co/image/ab67616d0000b27315bb125290f06007f5fdde84","https://i.scdn.co/image/ab67616d0000b273ddb5c4e3590fcb1dfc342adc","https://i.scdn.co/image/ab67616d0000b273bf6756ae69a440b743d33068","https://i.scdn.co/image/ab67616d0000b273be25c576df40b398275d0ef8","https://i.scdn.co/image/ab67616d0000b27390dbdf023a3fa7448fe1300c","https://i.scdn.co/image/ab67616d0000b273740eef60028e5e3c9f6c5a98","https://i.scdn.co/image/ab67616d0000b2737e0008d0e694000067e222d5","https://i.scdn.co/image/ab67616d0000b273b4260df694e6fc878e3e08c5","https://i.scdn.co/image/ab67616d0000b273b4260df694e6fc878e3e08c5","https://i.scdn.co/image/ab67616d0000b273b4260df694e6fc878e3e08c5","https://i.scdn.co/image/ab67616d0000b273b4260df694e6fc878e3e08c5","https://i.scdn.co/image/ab67616d0000b273b4260df694e6fc878e3e08c5","https://i.scdn.co/image/ab67616d0000b273b4260df694e6fc878e3e08c5","https://i.scdn.co/image/ab67616d0000b273b4260df694e6fc878e3e08c5","https://i.scdn.co/image/ab67616d0000b273c21b4ea2672902cc1515e17c","https://i.scdn.co/image/ab67616d0000b2731f5f69a6c8fe7a54e4338145","https://i.scdn.co/image/ab67616d0000b2733617af751606e9e8cf6c1675","https://i.scdn.co/image/ab67616d0000b273ffd55627c545dab5cd5048a2","https://i.scdn.co/image/ab67616d0000b273c8191ae1f0382f60d4237b21"],"Artistas":["Xerach, Magalí Datzira","Xerach","Xerach","Xerach","Xerach","Xerach","Xerach","LAJALADA","ANIBAL & LAJALADA, LAJALADA","LAJALADA","LAJALADA","LAJALADA, Jose Vera Bello","LAJALADA","LAJALADA","LAJALADA","LAJALADA","LAJALADA","LAJALADA","LAJALADA, Her Feminist Festival","ARUBE","ARUBE","ARUBE","ARUBE","ARUBE","ARUBE","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Eira","Ant Cosmos","Radio Palmer, Ant Cosmos","Ant Cosmos, Us","Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos, Illya Lukyanov","Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos","Nala Rami, Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos","Ant Cosmos","El Chelista, Coti","El Chelista","El Chelista","Nala Rami","Nala Rami","Nala Rami, Cabiria","Nala Rami, Juli Giuliani","Nala Rami","Nala Rami","Nala Rami","Nala Rami","Nala Rami","Nala Rami","Nala Rami","Nala Rami","Nala Rami","Nala Rami","Nala Rami, Monica Mussungo"],"Tema":["Celebrar los Triunfos (En Vivo)","Me da el bajón","Canción de Amor","Si yo soy Chavela, tú eres Frida","Acuario","Delsueloalcielo","Siluetas","round no. 38282818181","ROMANCE PALMERO","Dynamite","Las Tiritas","Magua","Interlude: No Te Vas","Laughs & Goes","Laderiva","Chira","demañananosé","Epilog: It Takes Too Long To Make You Feel My Love","dueñas y señoras","ALAVERITAMÍA","REPICAR","Nieve en Verano","BALASO","CURANDERA","Preludio del Drama","Aire fresco","Jenga","Son Los Gestos","Ecos En La Niebla","DEDBALI","Cuando El Cielo Caiga","Todo Es Guerra","Manantial","Luna","Bobsled Land","Espiral","El Paso","Repaso General","Arte Contemporáneo","El Paso II","Casino","Panorama","Siempre lo peor","Votación popular","Caramel","Abrazasoles","Hospital","Percibo percebes","Parpadeo","Y entró una avispa","Victoria!","EGO","Lo que te guste","Tocar Tu Cuerpo","Aire","si te vas","Deja que el dolor se clave","Mariana","Déjà Vu","Fruta en Vegueta","Fruta en Vegueta (Slowed & Reverb)","Escapar","Esta Habitación","Se Acabó","La Última","Dos Lágrimas, Dos Peces","Luciérnagas","Duende","Riki Raka","Vértigo","Lento","Llámame","Superficial","Tu Tejado","Luna de Colores","No Sé","After Party","Dos Lágrimas, Dos Peces","Tal Vez","Solo","Toda La Noche","13","Pizza de Ayer","La nana del idiota","Número Oculto","Play","Domingos","Morí en la Disco","Felih","Dulce Corazón","Ni en Sueños","Sexo y Pasión","Lloro Mientras Bailo","Solo tienes que bajar","No Sé Cómo Parar","Como tu amor por mí","ECOSINFIN","My Babe","Dulce Corazón","Baby Got Me Wrong"],"Duracion":[315918,183404,246428,174920,218964,176929,74285,283854,335000,304773,231120,188973,106746,257600,292173,277320,352773,146813,220125,190058,263453,205882,259459,256282,44705,203896,172263,264753,300390,288450,324777,245286,286696,229380,235789,218947,240000,209230,304941,267130,264280,254080,191456,149723,143364,168335,91717,128263,204913,109987,198250,142410,166298,230031,162791,219724,140505,156554,202294,184909,235636,278000,168352,168750,216627,220031,201851,109937,196595,195918,182920,171428,238250,204800,169459,187200,213228,220031,186666,220047,176012,137460,224583,141038,187200,232432,246412,237623,234935,259689,173846,184615,176471,210101,229333,247854,179081,232000,259689,247659],"Popularidad":[2,2,1,7,0,1,0,1,6,1,2,1,1,0,0,3,5,1,1,3,3,1,2,2,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,3,7,3,15,3,0,7,1,7,0,10,1,2,0,31,0,0,0,0,2,7,5,0,2,1,1,10,2,4,1,0,2,0,0,2,8,6,4,3,2,2,2,1,1,1,1,0,0,1],"tempo":[96.702,179.936,167.984,80.06,190.092,99.993,64.056,109.965,102.025,104.726,106.016,180.008,64.969,126.001,123.941,123.059,115.857,70.523,58.466,169.781,113.128,101.996,148.012,169.487,102.274,129.976,140.029,120.003,111.995,121.132,134.022,113.526,110.573,133.991,111.008,114.005,128.022,156.202,170.033,114.973,126.025,130.074,136.056,151.999,139.698,115.961,136.016,182.107,120.011,116.719,119.994,126.017,170.971,119.936,145.916,118.007,94.001,114.966,145.985,109.974,174.603,119.988,169.961,111.995,171.921,96.062,77.389,143.866,94.03,195.889,96.011,196.039,117.005,149.93,156.203,99.984,134.022,96.062,90.02,110.002,156.009,99.772,144.496,154.234,150.05,111.019,130.965,101.006,157.992,118.983,117.048,155.928,117.988,120.997,90.017,123.029,97.976,120.003,118.983,93.994],"key_name":["G#","E","F#","A#","F","C#","A","F","E","B","C","G","C#","A","A","E","E","E","G","F","E","E","D#","G","E","C","E","G","D#","B","C","A","C","A","E","F","D","A","F#","C","F#","B","G","E","E","A","C","F","E","A","G","F","D","F","G","C#","C","C#","A","C","G#","G","A","C","G#","F","A#","A","B","F","C#","E","D","B","F","C#","F#","F","D#","F#","G","F","A","G","A","G","F","D","G","F","E","G","B","C","G","C#","C#","C#","F","B"],"key_mode":["G# minor","E minor","F# minor","A# major","F minor","C# major","A major","F major","E minor","B minor","C major","G major","C# minor","A minor","A minor","E major","E minor","E major","G major","F minor","E minor","E minor","D# major","G major","E minor","C major","E minor","G major","D# minor","B minor","C minor","A minor","C minor","A minor","E minor","F major","D major","A major","F# major","C major","F# minor","B minor","G major","E major","E major","A major","C major","F major","E major","A minor","G major","F minor","D major","F major","G major","C# minor","C major","C# minor","A minor","C major","G# major","G major","A major","C major","G# minor","F major","A# major","A minor","B minor","F minor","C# minor","E major","D minor","B minor","F major","C# major","F# minor","F major","D# minor","F# minor","G major","F major","A major","G major","A major","G minor","F minor","D major","G minor","F major","E minor","G minor","B minor","C minor","G major","C# major","C# major","C# major","F major","B minor"],"loudness":[-12.939,-12.053,-10.632,-9.03,-7.037,-10.365,-19.98,-8.969,-12.047,-10.322,-8.128,-8.939,-15.685,-11.769,-9.699,-9.619,-9.831,-21.166,-7.567,-9.56,-9.081,-12.504,-12.554,-10.024,-20.4,-6.407,-5.416,-5.474,-8.341,-9.937,-4.745,-6.379,-8.005,-8.946,-9.944,-6.443,-16.571,-9.927,-10.375,-10.286,-5.493,-6.417,-5.417,-7.063,-7.254,-6.567,-9.908,-6.468,-6.065,-10.146,-9.86,-6.176,-7.883,-6.544,-11.873,-10.774,-8.526,-9.515,-9.949,-12.059,-12.311,-13.065,-8.502,-2.389,-10.436,-7.107,-10.008,-3.937,-4.031,-7.432,-5.522,-4.873,-7.917,-5.261,-4.996,-4.52,-8.596,-7.107,-8.233,-7.583,-6.609,-10.215,-9.631,-11.983,-10.556,-8.077,-6.278,-7.16,-7.435,-8.211,-7.743,-8.23,-7.805,-7.001,-8.732,-9.433,-9.815,-8.604,-8.211,-9.076]}}]}
+</script>
 
 
 </head>
@@ -108,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="bslib-grid-item html-fill-item bslib-grid" data-layout="fill" style="display: grid; grid-template-columns: minmax(3em, 25fr) minmax(3em, 35fr);
 grid-auto-rows: minmax(0, 1fr);">
-<div class="bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content) minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
 <div class="card bslib-card html-fill-container" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
 <img src="images/logo.png" class="img-fluid" style="width:10.0%">
@@ -119,47 +158,67 @@ grid-auto-rows: minmax(0, 1fr);">
         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
     </span>
 </bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-<div class="card cell bslib-card html-fill-container" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-body html-fill-item html-fill-container">
-<div class="cell-output cell-output-stdout html-fill-item html-fill-container">
-<pre><code># A tibble: 6 × 14
-  name      height  mass hair_color skin_color eye_color birth_year sex   gender
-  &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
-1 Luke Sky…    172    77 blond      fair       blue            19   male  mascu…
-2 C-3PO        167    75 &lt;NA&gt;       gold       yellow         112   none  mascu…
-3 R2-D2         96    32 &lt;NA&gt;       white, bl… red             33   none  mascu…
-4 Darth Va…    202   136 none       white      yellow          41.9 male  mascu…
-5 Leia Org…    150    49 brown      light      brown           19   fema… femin…
-6 Owen Lars    178   120 brown, gr… light      blue            52   male  mascu…
-# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
-#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
-</div>
-</div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div><div class="bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 10fr) minmax(3em, 70fr) minmax(3em, 20fr); grid-auto-columns: minmax(0, 1fr);">
 <div class="bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
-<div class="card bslib-card html-fill-container" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card cell bslib-card html-fill-container" data-bslib-card-init="" data-require-bs-caller="card()">
 <div class="card-body html-fill-item html-fill-container">
-<p>placeholder text for column 2, row 1</p>
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb1" data-startfrom="79" data-source-offset="-48"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 78;"><span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>mergedDf_ojst <span class="op">=</span> <span class="fu">transpose</span>(mergedDf_ojs)</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="co">// Create a dropdown menu of the songs</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>viewof songDropdown <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>  mergedDf_ojst<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">Tema</span>)<span class="op">,</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Choose a song"</span><span class="op">,</span></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>    <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-1-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
 </div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-1-2" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div>
 <div class="bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
-<div class="card bslib-card html-fill-container" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card cell bslib-card html-fill-container" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
-<p>placeholder text for column 2, row 2</p>
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb2" data-startfrom="97" data-source-offset="-50"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 96;"><span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">getTemaId</span>(Tema) {</span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> song <span class="op">=</span> mergedDf_ojst<span class="op">.</span><span class="fu">find</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">Tema</span> <span class="op">===</span> Tema)<span class="op">;</span></span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> song <span class="op">?</span> song<span class="op">.</span><span class="at">Tema_id</span> <span class="op">:</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a><span class="co">// HTML for the iframe with dynamic src</span></span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;iframe style="border-radius:12px" </span></span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="vs">  src="https://open.spotify.com/embed/track/</span><span class="sc">${</span><span class="fu">getTemaId</span>(songDropdown)<span class="sc">}</span><span class="vs">?utm_source=generator" </span></span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="vs">  width="100%" height="352" frameborder="0" allowfullscreen </span></span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="vs">  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"&gt;</span></span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/iframe&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-2-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-2-2" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
 </div>
 <bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
     <template>Expand</template>
@@ -187,6 +246,17 @@ grid-auto-rows: minmax(0, 1fr);">
 </div>
 
 
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxuLy8gVHJhbnBvc2UgdGhlIGRhdGEgdG8gIG1ha2UgaXQgdXNhYmxlIGluIG9qc1xubWVyZ2VkRGZfb2pzdCA9IHRyYW5zcG9zZShtZXJnZWREZl9vanMpXG5cbi8vIENyZWF0ZSBhIGRyb3Bkb3duIG1lbnUgb2YgdGhlIHNvbmdzXG52aWV3b2Ygc29uZ0Ryb3Bkb3duID0gSW5wdXRzLnNlbGVjdChcbiAgbWVyZ2VkRGZfb2pzdC5tYXAoZCA9PiBkLlRlbWEpLFxuICB7XG4gICAgbGFiZWw6IFwiQ2hvb3NlIGEgc29uZ1wiLFxuICAgIHVuaXF1ZTogdHJ1ZVxuICB9XG4pXG5cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ii8vIEZ1bmN0aW9uIHRvIGdldCBUZW1hX2lkIGJhc2VkIG9uIHNlbGVjdGVkIFRlbWFcbmZ1bmN0aW9uIGdldFRlbWFJZChUZW1hKSB7XG4gIGNvbnN0IHNvbmcgPSBtZXJnZWREZl9vanN0LmZpbmQoZCA9PiBkLlRlbWEgPT09IFRlbWEpO1xuICByZXR1cm4gc29uZyA/IHNvbmcuVGVtYV9pZCA6IFwiXCI7XG59XG5cbi8vIEhUTUwgZm9yIHRoZSBpZnJhbWUgd2l0aCBkeW5hbWljIHNyY1xuaHRtbGA8aWZyYW1lIHN0eWxlPVwiYm9yZGVyLXJhZGl1czoxMnB4XCIgXG4gIHNyYz1cImh0dHBzOi8vb3Blbi5zcG90aWZ5LmNvbS9lbWJlZC90cmFjay8ke2dldFRlbWFJZChzb25nRHJvcGRvd24pfT91dG1fc291cmNlPWdlbmVyYXRvclwiIFxuICB3aWR0aD1cIjEwMCVcIiBoZWlnaHQ9XCIzNTJcIiBmcmFtZWJvcmRlcj1cIjBcIiBhbGxvd2Z1bGxzY3JlZW4gXG4gIGFsbG93PVwiYXV0b3BsYXk7IGNsaXBib2FyZC13cml0ZTsgZW5jcnlwdGVkLW1lZGlhOyBmdWxsc2NyZWVuOyBwaWN0dXJlLWluLXBpY3R1cmVcIiBsb2FkaW5nPVwibGF6eVwiPlxuPC9pZnJhbWU+YFxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdzb25nRHJvcGRvd24nKSJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
