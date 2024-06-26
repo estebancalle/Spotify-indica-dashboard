@@ -15,21 +15,99 @@ format:
 #| include: false
 
 library(tidyverse)
+library(spotifyr)
+
+# acces token
+access_token <- get_spotify_access_token()
+
+
 ```
 
 ```{r, print}
-head(starwars)
+
+indicaplaylist <- get_playlist("5AA76fRMl48fDXKeV6w5wq")
+
+indicaplaylisttracks <- get_playlist_tracks("5AA76fRMl48fDXKeV6w5wq") 
+
+
+tracksDf <- indicaplaylisttracks |> select("track.id","track.name", "track.duration_ms", "track.popularity", "track.artists", "track.album.images") |> mutate(artist.name = map_chr(track.artists, function(x) {
+    # Verifica la cantidad de artistas
+    if(length(x$name) > 1) {
+      # Concatena los nombres de los artistas
+      paste(x$name[1], x$name[2], sep = ", ")
+    } else {
+      # Solo un artista
+      x$name[1]
+    }
+  })) |> 
+  mutate(Portada = map_chr(track.album.images, function(x) {x$url[1]})) |> 
+  select(Tema_id=track.id, Portada, Artistas = artist.name, Tema = track.name,Duracion = track.duration_ms, Popularidad = track.popularity)
+
+
+```
+
+
+```{r}
+playlist_audio_features <- get_playlist_audio_features(playlist_uris = "5AA76fRMl48fDXKeV6w5wq")
+
+tempoKeyDf <- playlist_audio_features |> select(Tema_id="track.id", "tempo", "key_name", "key_mode", "loudness")
+
+
+# Realizar el left join
+mergedDf <- tracksDf %>%
+  left_join(tempoKeyDf, by = "Tema_id")
+
 ```
 
 ## Column {width="35%"}
 
 ### Row {height="10%"}
 
-placeholder text for column 2, row 1
+
+```{r, sendtoojs}
+#| echo: false
+#| include: false
+ojs_define(mergedDf_ojs = mergedDf)
+
+
+```
+
+```{ojs}
+//| expandable: false
+
+// Tranpose the data to  make it usable in ojs
+mergedDf_ojst = transpose(mergedDf_ojs)
+
+// Create a dropdown menu of the songs
+viewof songDropdown = Inputs.select(
+  mergedDf_ojst.map(d => d.Tema),
+  {
+    label: "Choose a song",
+    unique: true
+  }
+)
+
+```
+
 
 ### Row {height="70%"}
 
-placeholder text for column 2, row 2
+```{ojs}
+// Function to get Tema_id based on selected Tema
+function getTemaId(Tema) {
+  const song = mergedDf_ojst.find(d => d.Tema === Tema);
+  return song ? song.Tema_id : "";
+}
+
+// HTML for the iframe with dynamic src
+html`<iframe style="border-radius:12px" 
+  src="https://open.spotify.com/embed/track/${getTemaId(songDropdown)}?utm_source=generator" 
+  width="100%" height="352" frameborder="0" allowfullscreen 
+  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+</iframe>`
+```
+
+
 
 ### Row {height="20%"}
 
